@@ -4,48 +4,19 @@ import java.util.Arrays;
 
 public class first
 {
+    public static void main(String args[])
+    {
+        String s1="Good";
+        String s2="Morning";
+         s1=s1+s2;
+         System.out.println(s1);
+         s2=s1.substring(0,s1.length()-s2.length());
+         s1=s1.substring(s2.length());
+         System.out.println(s2);
+         System.out.println(s1);
 
 
 
-                public static void main(String[] args) {
-                        int[] array = { 9, 3, 5, 1, 8, 2, 7, 4, 6 };
-                        quickSort(array, 0, array.length - 1);
-
-                        for (int num : array) {
-                                System.out.print(num + " ");
-                        }
-                }
-
-                public static void quickSort(int[] array, int low, int high) {
-                        if (low < high) {
-                                int pivotIndex = partition(array, low, high);
-                                quickSort(array, low, pivotIndex - 1);
-                                quickSort(array, pivotIndex + 1, high);
-                        }
-                }
-
-                public static int partition(int[] array, int low, int high) {
-                        int pivot = array[high];
-                        int i = low - 1;
-
-                        for (int j = low; j < high; j++) {
-                                if (array[j] < pivot) {
-                                        i++;
-                                        int temp = array[i];
-                                        array[i] = array[j];
-                                        array[j] = temp;
-                                }
-                        }
-
-                        int temp = array[i + 1];
-                        array[i + 1] = array[high];
-                        array[high] = temp;
-
-                        return i + 1;
-                }
-        
-
-
-
+    }
 
 }
